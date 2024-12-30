@@ -1,0 +1,17 @@
+.income-form {
+    margin-bottom: 20px;
+  }
+  
+  .income-form input {
+    margin: 5px 0;
+    padding: 8px;
+    width: calc(100% - 16px);
+  }
+  
+  .income-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }

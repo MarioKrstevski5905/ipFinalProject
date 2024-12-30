@@ -1,0 +1,17 @@
+.expenses-form {
+    margin-bottom: 20px;
+  }
+  
+  .expenses-form input {
+    margin: 5px 0;
+    padding: 8px;
+    width: calc(100% - 16px);
+  }
+  
+  .expenses-form button {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
