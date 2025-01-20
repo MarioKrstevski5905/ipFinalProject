@@ -1,6 +1,9 @@
 <div>
   <h1>Budget Tracker</h1>
-  <app-budget-summary></app-budget-summary>
-  <app-income></app-income>
-  <app-expenses></app-expenses>
+  <nav>
+    <a routerLink="/budget-summary">Budget Summary</a> |
+    <a routerLink="/income">Add Income</a> |
+    <a routerLink="/expenses">Add Expense</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>

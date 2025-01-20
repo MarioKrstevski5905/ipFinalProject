@@ -2,3 +2,30 @@ h1 {
     text-align: center;
     color: #333;
   }
+  nav {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    background-color: #1e90ff;
+    transform: scale(1.1);
+  }
+  
+  nav a.router-link-active {
+    color: #fff;
+    background-color: #ff6347;
+  }
+  
