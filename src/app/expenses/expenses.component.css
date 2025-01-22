@@ -1,37 +1,59 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
 .expense-form {
-  background-color: #8f3333; 
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top:20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #a1a887;
+  margin: 20px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.expense-form input {
-  color: #5e0101;
-  font-size:25px;
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
   padding: 10px;
-  margin: 5px;
-  width: 30%;
-}
-
-.expense-form button {
-  font-size:18px;
-  background-color: #7a7a7a; 
-  color: rgb(0, 0, 0); 
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
+  background-color: #dc3545; 
+  color: white;
   border: none;
-  cursor: pointer; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  width: 10%; 
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.expense-form button:hover {
-  transform: scale(1.1); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.validation-error {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 5px;
 }

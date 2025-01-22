@@ -1,6 +1,45 @@
 <div class="income-form">
-    <h2>Add Income</h2>
-    <input [(ngModel)]="description" placeholder="Description" />
-    <input type="number" [(ngModel)]="amount" placeholder="Amount" />
-    <button (click)="addIncome()">Add Income</button>
-  </div>
+  <h2>Add Income</h2>
+  <form (ngSubmit)="addIncome()" #incomeForm="ngForm">
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        id="description"
+        name="description"
+        [(ngModel)]="description"
+        placeholder="Enter a description"
+        required
+        minlength="3"
+        maxlength="50"
+        #descInput="ngModel"
+      />
+      <div *ngIf="descInput.invalid && (descInput.touched || descInput.dirty)" class="validation-error">
+        <div *ngIf="descInput.errors?.['required']">Description is required.</div>
+        <div *ngIf="descInput.errors?.['minlength']">
+          Description must be at least 3 characters long.
+        </div>
+        <div *ngIf="descInput.errors?.['maxlength']">
+          Description cannot exceed 50 characters.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input
+        id="amount"
+        name="amount"
+        type="number"
+        [(ngModel)]="amount"
+        placeholder="Enter the amount"
+        required
+        min="0"
+        #amountInput="ngModel"
+      />
+      <div *ngIf="amountInput.invalid && (amountInput.touched || amountInput.dirty)" class="validation-error">
+        <div *ngIf="amountInput.errors?.['required']">Amount is required.</div>
+        <div *ngIf="amountInput.errors?.['min']">Amount must be a positive number.</div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="incomeForm.invalid">Add Income</button>
+  </form>
+</div>
